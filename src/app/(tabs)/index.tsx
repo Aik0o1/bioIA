@@ -1,7 +1,7 @@
 // src/app/index.tsx
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { Button } from '../components/Button'; // 1. Importa o componente Button
+import { Button } from '../../components/Button'; // 1. Importa o componente Button
 
 export default function Home() {
   return (
