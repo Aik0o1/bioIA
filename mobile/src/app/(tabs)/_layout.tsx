@@ -1,16 +1,28 @@
 import { Tabs } from "expo-router";
-import AntDesign from "@expo/vector-icons/AntDesign";
-import Fontisto from "@expo/vector-icons/Fontisto";
-import Feather from "@expo/vector-icons/Feather";
-import FontAwesome5 from "@expo/vector-icons/FontAwesome5";
-import Foundation from '@expo/vector-icons/Foundation';
-import { StyleSheet } from "react-native";
+import {MaterialCommunityIcons} from "@expo/vector-icons";
+import { palette } from "../../constants/theme"; 
 
 export default function TabsLayout() {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: "#00b28f",
+        headerStyle: {
+          backgroundColor: palette.fundoClaro,
+          elevation: 0,
+          shadowOpacity: 0,
+          borderBottomWidth: 1,
+          borderBottomColor: 'rgba(0,0,0,0.05)'
+        },
+        headerTitleStyle: {
+          color: palette.textoEscuro,
+          fontWeight: 'bold',
+        },
+        tabBarActiveTintColor: palette.verdePrimary,
+        tabBarStyle: {
+            backgroundColor: palette.branco,
+            borderTopWidth: 0,
+            elevation: 0,
+        }
       }}
     >
       <Tabs.Screen
@@ -18,7 +30,7 @@ export default function TabsLayout() {
         options={{
           title: "Home",
           tabBarIcon: ({ color, size }) => (
-            <AntDesign name="home" size={24} color={color} />
+            <MaterialCommunityIcons name="home" size={size} color={color} />
           ),
         }}
       />
@@ -27,7 +39,7 @@ export default function TabsLayout() {
         options={{
           title: "Identificar",
           tabBarIcon: ({ color, size }) => (
-            <Fontisto name="search" size={24} color={color} />
+            <MaterialCommunityIcons name="search-web" size={size} color={color} />
           ),
         }}
       />
@@ -36,7 +48,7 @@ export default function TabsLayout() {
         options={{
           title: "Mapa",
           tabBarIcon: ({ color, size }) => (
-            <Feather name="map" size={24} color={color} />
+            <MaterialCommunityIcons name="map" size={size} color={color} />
           ),
         }}
       />
@@ -45,7 +57,7 @@ export default function TabsLayout() {
         options={{
           title: "Relações",
           tabBarIcon: ({ color, size }) => (
-            <FontAwesome5 name="envira" size={24} color={color} />
+            <MaterialCommunityIcons name="molecule" size={size} color={color} />
           ),
         }}
       />
@@ -54,16 +66,10 @@ export default function TabsLayout() {
         options={{
           title: "Socorros",
           tabBarIcon: ({ color, size }) => (
-            <Foundation name="first-aid" size={24} color={color} />
+            <MaterialCommunityIcons name="medical-bag" size={size} color={color} />
           ),
         }}
       />
     </Tabs>
   );
 }
-
-// const style = StyleSheet.create({
-//   icons: {
-//     color:"#00b28f",
-//   }
-// })
