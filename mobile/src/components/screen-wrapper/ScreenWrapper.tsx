@@ -39,7 +39,7 @@ export function ScreenWrapper({
         style,
       ]}
     >
-      <StatusBar style="auto" backgroundColor="transparent" translucent />
+      <StatusBar style="dark" backgroundColor="transparent" translucent />
       {children}
     </View>
   );
