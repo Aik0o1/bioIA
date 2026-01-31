@@ -2,12 +2,12 @@ import React from 'react';
 import { ScrollView, View } from 'react-native';
 import { Text } from 'react-native-paper';
 import { useRouter } from 'expo-router';
-import { StatsGrid } from '../../components/Home/StatsGrid';
+import { StatsGrid } from '../../components/home-components/StatsGrid';
 import { layout, palette } from '../../constants/theme';
 import { ScreenWrapper } from '@/src/components/screen-wrapper/ScreenWrapper';
 import { CustomHeader } from '@/src/components/header/CustomHeader';
 import { FeatureCard } from '@/src/components/cards/FeatureCard';
-import { HeroBanner } from '@/src/components/Home/HeroBanner';
+import { HeroBanner } from '@/src/components/home-components/HeroBanner';
 
 export default function Home() {
   const router = useRouter();
