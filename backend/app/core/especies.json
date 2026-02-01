@@ -1,0 +1,20 @@
+[
+  {
+    "id": "Loxodonta africana",
+    "nome_comum": "Elefante-africano",
+    "nome_cientifico": "Loxodonta africana",
+    "descricao": "O elefante-africano é o maior animal terrestre do mundo."
+  },
+  {
+    "id": "Panthera leo",
+    "nome_comum": "Leão",
+    "nome_cientifico": "Panthera leo",
+    "descricao": "O leão é um grande felino carnívoro conhecido como o rei da selva."
+  },
+  {
+    "id": "Acinonyx jubatus",
+    "nome_comum": "Guepardo",
+    "nome_cientifico": "Acinonyx jubatus",
+    "descricao": "O guepardo é o animal terrestre mais rápido do mundo."
+  }
+]
