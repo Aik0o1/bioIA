@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   View,
   Text,
   ScrollView,
   StyleSheet,
   TouchableOpacity,
-  Alert,
 } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { palette, layout } from "../../constants/theme";
@@ -14,70 +13,16 @@ import { CustomHeader } from "@/src/components/header/CustomHeader";
 import { ActionButtons } from "@/src/components/identificar-components/ActionButtons";
 import { AnalysisLoading } from "@/src/components/identificar-components/AnalysisLoading";
 import { SpeciesResult } from "@/src/components/identificar-components/SpeciesResult";
-import * as ImagePicker from "expo-image-picker";
+import { useIdentification } from "@/src/hooks/useIdentification";
 
 export default function Identificar() {
-  const [status, setStatus] = useState<"input" | "loading" | "result">("input");
-  const [selectImage, setSelectImage] = useState<string | null>(null);
+  const {
+    status,
+    resultData,
+    handleSelectImage,
+    handleReset
 
-  const handleSelectImage = async (source: "camera" | "gallery") => {
-    try {
-      let result;
-
-      const options: ImagePicker.ImagePickerOptions = {
-        mediaTypes: ["images"],
-        allowsEditing: true,
-        aspect: [4, 3],
-        quality: 1,
-      };
-
-      if (source === "camera") {
-        const permission = await ImagePicker.requestCameraPermissionsAsync();
-
-        if (!permission.granted) {
-          Alert.alert(
-            "Permissão necessária",
-            "Precisamos de permissão para acessar a câmera.",
-          );
-          return;
-        }
-        result = await ImagePicker.launchCameraAsync(options);
-      } else {
-        result = await ImagePicker.launchImageLibraryAsync(options);
-      }
-
-      if (!result.canceled && result.assets[0]){
-        setSelectImage(result.assets[0].uri);
-        setStatus('loading');
-
-        setTimeout(()=>{
-          setStatus('result');
-        }, 3000);
-      }
-    } catch (error) {
-      console.log("erro", error);
-      Alert.alert("Erro", "Não foi possível carregar a imagem.");
-    }
-  };
-
-  const mockResult = {
-    name: "Onça-pintada",
-    scientificName: "Panthera onca",
-    imageUrl:
-      "https://upload.wikimedia.org/wikipedia/commons/0/0a/Standing_jaguar.jpg",
-    type: "Animal" as const,
-    status: "Vulnerável (VU)",
-    ecologicalRole:
-      "Predador de topo de cadeia, essencial para o equilíbrio do ecossistema ao controlar populações de presas.",
-    careInstructions:
-      "Mantenha distância. Nunca dê as costas ou corra. Notifique as autoridades ambientais locais.",
-    funFact:
-      "A onça-pintada possui a mordida mais forte entre todos os felinos do mundo, capaz de perfurar até cascos de tartarugas.",
-  };
-
-  const handleReset = () => {
-    setStatus("input");
-  };
+  } = useIdentification();
 
   return (
     <ScreenWrapper>
@@ -110,7 +55,7 @@ export default function Identificar() {
               <Text style={styles.resultTitle}>Resultado da IA</Text>
             </View>
 
-            <SpeciesResult data={mockResult} />
+            <SpeciesResult data={resultData} />
 
             <TouchableOpacity style={styles.resetButton} onPress={handleReset}>
               <MaterialCommunityIcons
