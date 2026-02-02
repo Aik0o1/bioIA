@@ -1,0 +1,11 @@
+requests
+torch
+torchvision
+pillow
+numpy
+psycopg2-binary
+sqlalchemy
+fastapi
+uvicorn
+python-multipart
+pgvector

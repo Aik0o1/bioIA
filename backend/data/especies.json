@@ -1,0 +1,35 @@
+[
+  {
+    "id": "loxodonta_africana",
+    "nome": "Elefante-africano",
+    "nome_cientifico": "Loxodonta africana",
+    "tipo": "Mamífero",
+    "nivel_ameaca": "Vulnerável",
+    "habitat": "Savanas, florestas e áreas semiáridas",
+    "estados_ocorrencia": "África Subsaariana",
+    "caracteristicas": "Maior animal terrestre, tromba longa, grandes orelhas e presas de marfim",
+    "papel_ecologico": "Espécie-chave que modifica o ambiente, abrindo clareiras e dispersando sementes"
+  },
+  {
+    "id": "panthera_leo",
+    "nome": "Leão",
+    "nome_cientifico": "Panthera leo",
+    "tipo": "Mamífero",
+    "nivel_ameaca": "Vulnerável",
+    "habitat": "Savanas e pastagens abertas",
+    "estados_ocorrencia": "África Subsaariana e pequena população na Índia",
+    "caracteristicas": "Grande felino social, machos com juba, predador de topo",
+    "papel_ecologico": "Controla populações de herbívoros e mantém o equilíbrio do ecossistema"
+  },
+  {
+    "id": "acinonyx_jubatus",
+    "nome": "Guepardo",
+    "nome_cientifico": "Acinonyx jubatus",
+    "tipo": "Mamífero",
+    "nivel_ameaca": "Vulnerável",
+    "habitat": "Savanas, campos abertos e regiões semiáridas",
+    "estados_ocorrencia": "África e pequena população no Irã",
+    "caracteristicas": "Animal terrestre mais rápido, corpo esguio e garras semi-retráteis",
+    "papel_ecologico": "Regula populações de presas rápidas e mantém a diversidade genética"
+  }
+]
