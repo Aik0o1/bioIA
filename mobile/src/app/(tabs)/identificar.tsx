@@ -14,6 +14,7 @@ import { ActionButtons } from "@/src/components/identificar-components/ActionBut
 import { AnalysisLoading } from "@/src/components/identificar-components/AnalysisLoading";
 import { SpeciesResult } from "@/src/components/identificar-components/SpeciesResult";
 import { useIdentification } from "@/src/hooks/useIdentification";
+import { NatureFiller } from "@/src/components/identificar-components/NatureFiller";
 
 export default function Identificar() {
   const {
@@ -46,6 +47,8 @@ export default function Identificar() {
               onCameraPress={() => handleSelectImage("camera")}
               onGalleryPress={() => handleSelectImage("gallery")}
             />
+
+            <NatureFiller/>
           </View>
         ) : (
           /* Se FOR Resultado, mostramos apenas o resultado */
