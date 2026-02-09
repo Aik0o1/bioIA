@@ -3,7 +3,7 @@
 * **Framework Principal:** React Native com Expo (SDK 50+).
 * **Linguagem:** TypeScript.
 * **Roteamento:** Expo Router (Roteamento baseado em arquivos).
-* **Mapas:** React Native WebView + Leaflet (OpenStreetMap) - Decisão tomada para evitar custos e complexidade de API Keys do Google Maps.
+* **Mapas:** React Native WebView + Leaflet (OpenStreetMap).
 * **Mídia:** Expo Image Picker (Câmera e Galeria).
 * **Estilização:** StyleSheet nativo com Design System centralizado (palette, layout).
 * **Ícones:** Material CommunityIcons (via Expo Vector Icons).
@@ -46,7 +46,7 @@ Permite ao usuário descobrir qual é a espécie animal ou vegetal através de u
 * **Componentes Chave:** Action Buttons, NatureFiller (animação decorativa), SpeciesResult.
 
 ### 2.3. Módulo Mapa da Biodiversidade (mapa.tsx)
-* **Tecnologia:** Utiliza LeafletMap (WebView) para renderizar o OpenStreetMap, contornando a necessidade de API Key do Google Maps (solução para o erro API key not found).
+* **Tecnologia:** Utiliza LeafletMap (WebView) para renderizar o OpenStreetMap.
 * **Funcionalidades:**
     * Navegação livre pelo mapa do Brasil.
     * Marcadores customizados para locais de interesse. (precisa de ajuste)
