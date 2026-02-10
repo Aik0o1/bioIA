@@ -33,7 +33,7 @@ export function useMapExplore() {
     selectedLocation,
     searchText,
     locations: LOCATIONS_MOCK,
-    handleSelectLocationId, // ficar claro que recebe ID
+    handleSelectLocationId, // recebe ID
     handleSearch,
     handleClearSelection
   };

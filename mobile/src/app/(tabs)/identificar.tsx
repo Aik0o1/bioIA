@@ -51,7 +51,7 @@ export default function Identificar() {
             <NatureFiller/>
           </View>
         ) : (
-          /* Se FOR Resultado, mostramos apenas o resultado */
+          /*mostramos apenas o resultado */
           <View>
             <View style={styles.resultHeader}>
               <View style={styles.resultIndicator} />

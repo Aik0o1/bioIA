@@ -6,9 +6,7 @@ export default function TabsLayout() {
   return (
     <Tabs
       screenOptions={{
-        headerShown: false,
-
-        // nao estamos utilizando devido o false
+        headerShown: false,  // nao estamos utilizando devido o false
         headerStyle: {  
           backgroundColor: palette.fundoClaro,
           elevation: 0,

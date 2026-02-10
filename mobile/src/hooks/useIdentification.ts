@@ -11,7 +11,7 @@ export function useIdentification() {
   const handleSelectImage = async (source: "camera" | "gallery") => {
     try {
       const options: ImagePicker.ImagePickerOptions = {
-        mediaTypes: ["images"], //versão mais recente
+        mediaTypes: ["images"], //versão recente
         allowsEditing: true,
         aspect: [4, 3],
         quality: 1,

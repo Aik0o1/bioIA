@@ -37,7 +37,7 @@ export function LocationDetailsSheet({ data }: LocationDetailsSheetProps) {
 
       <Text style={styles.description}>{data.description}</Text>
 
-      {/* Carrossel de Espécies */}
+      {/* Carrossel */}
       <View style={styles.section}>
         <View style={styles.sectionHeader}>
             <Text style={styles.sectionTitle}>Espécies Nativas</Text>
@@ -83,7 +83,7 @@ export function LocationDetailsSheet({ data }: LocationDetailsSheetProps) {
   );
 }
 
-import { Platform } from 'react-native'; // Import necessário para o Linking
+import { Platform } from 'react-native'; // necessário para o Linking
 import { MapLocation } from '@/src/data/mocks/mapaData';
 
 const styles = StyleSheet.create({

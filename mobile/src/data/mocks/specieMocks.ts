@@ -3,7 +3,6 @@
 export const MOCK_SPECIES_RESULT = {
   name: "Onça-pintada",
   scientificName: "Panthera onca",
-  // Vamos deixar a imagem dinâmica no hook, aqui fica null ou placeholder
   imageUrl: "https://upload.wikimedia.org/wikipedia/commons/0/0a/Standing_jaguar.jpg",
   type: "Animal" as const,
   status: "Vulnerável (VU)",

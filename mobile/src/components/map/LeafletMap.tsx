@@ -65,12 +65,12 @@ export function LeafletMap({ locations, selectedLocation, onSelectLocation, onMa
             markers[loc.id] = marker;
           });
 
-          // Evento de Clique no Mapa (para limpar seleção)
+          // Evento de Clique no Mapa / para limpar seleção
           map.on('click', function() {
             window.ReactNativeWebView.postMessage(JSON.stringify({ type: 'mapClick' }));
           });
 
-          //Função para receber comandos do React Native (Zoom/Pan)
+          //receber comandos do React Native (Zoom/Pan)
           document.addEventListener('message', function(event) {
              handleMessage(event);
           });
